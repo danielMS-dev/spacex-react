@@ -1,7 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom';
+import  Launches  from './components/Launches';
+import LaunchesContextProvider from './contexts/LaunchesContext'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/style.css'
+import './assets/css/Layout.css'
 
-function App() {
+
+//import logo from './logo.svg';
+//import './App.css';
+
+const App = () =>(
+<BrowserRouter>
+<LaunchesContextProvider>
+<div className="layout">
+    <Launches/>
+    </div>
+    </LaunchesContextProvider>
+</BrowserRouter>
+)
+
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,5 +40,5 @@ function App() {
     </div>
   );
 }
-
+ */
 export default App;
